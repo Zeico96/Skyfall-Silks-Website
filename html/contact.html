@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" href="../Images/General/Favicon.png" type="image/png" sizes="16x16">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sansdisplay=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../css/general.css">
+        <link rel="stylesheet" type="text/css" href="../css/contact.css">
+        <title>Skyfall Silks</title>
+
+    </head>
+    <body>
+
+        <nav class="desktop-nav-bar" id="nav">            
+            <ul>
+                <li>
+                    <img id="logo" src="../Images/General/Logo.svg" width = 200 alt = "The logo of Skyfall Silks, consisting of the words 'Skyfall Silks' and below that a silhouette of women hanging on a purple Silk circus apparatus">
+                </li>
+    
+                <li>
+                    <a href="../html/index.html">Home</a>
+                </li>
+    
+                <li>
+                    <a href="./about.html">About</a>
+                </li>
+    
+                <li>
+                    <a href="../html/gallery.html">Gallery</a>
+                </li>
+    
+                <li>
+                    <a href="../html/pricing.html">Pricing</a>
+                </li>
+    
+                <li>
+                    <a href="../html/faq.html">FAQ</a>
+                </li>
+    
+                <li>
+                    <a href="../html/contact.html" class="active" >Contact</a>
+                </li>
+                
+                <li id="padding">
+                    <a class="social-link-button" id="facebook-icon" href="https://www.facebook.com/skyfallsilks/" target="_blank"></a>
+                </li>   
+            </ul>
+    
+        </nav>
+    
+            
+        <!--  Mobile navigation bar
+    
+        The html below is respsonsible for the mobile navigation and has been sourced from W3 Schools, with minor modifcations
+        made to achieve the desired outcome.
+    
+        Author: W3 Schools / Damian Kempter 
+        Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_mobile_navbar
+                                                                            -->
+        <div class="mobile-nav-bar">
+            <img src="../Images/General/Hamburger_icon.png" alt="A hamburger icon consisting of three horizontal lines stacked, the icon acts as a toggle to reveal and hide the website navigation links" id="hamburger-icon" height="40" onclick="myFunction()">
+            <div id="center-logo">
+                <img src="../Images/General/Logo_Wide_Skyfall_Silks.svg" id="mobile-logo" height="55" alt = "The logo of Skyfall Silks, consisting of the words 'Skyfall Silks' and beside that a silhouette of women hanging on a purple Silk circus apparatus">
+            </div>
+    
+            <div id="mobile-nav-items">
+                <a href="../html/index.html">Home</a>
+                <a href="../html/about.html">About</a>
+                <a href="../html/gallery.html">Gallery</a>
+                <a href="../html/pricing.html">Pricing</a>
+                <a href="../html/faq.html" >FAQ</a>
+                <a href="../html/contact.html" class="active" >Contact</a>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1 class="heading">Contact</h1>
+                <p>
+                    Feel free to call and text using the number below or message us on our Facebook page. Alternatively, you can email us at the 
+                    address below or use our contact form.
+                </p>
+                <br>
+                
+                <div class="link-container">
+                    <a class="link-button" href="tel:+0459-635-214"><img class="icon" src="../Images/General/phone-icon.svg" height="35" alt="An icon that resebles a phone from a side angle"><p>0459 635 214</p></a>
+                </div>
+
+                <div class="link-container">
+                    <a class="link-button" target="_blank" href="http://m.me/skyfallsilks"><img class="icon" src="../Images/General/facebook-messenger-icon.svg" height="35" alt="The logo for Facebook Messenger"><p>FB messenger</p></a>
+                </div>
+
+                <div class="link-container">
+                    <a class="link-button" href="mailto:corinnekempter@gmail.com"><img class="icon" src="../Images/General/email-icon.svg" height="35" alt="The @ symbol used to represent email"><p>corinnekempter@gmail.com</p></a>
+                </div>
+
+                <h4 class="tiny-heading">Address</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3569.6088962575313!2d152.68900225164452!3d-26.532700183210665!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9486869e15947f%3A0xcbb2a005b25611de!2s278%20Coonoongibber%20Creek%20Rd%2C%20Brooloo%20QLD%204570!5e0!3m2!1sen!2sau!4v1589204946219!5m2!1sen!2sau" width="400" height="300" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
+                <h2 class="sub-heading">Contact Form</h2>
+
+                <form action="/action_page.php">
+                    <div class="form-inline">
+                        <input type="text" class="left-section" id="fname" name="firstname" placeholder="Name">
+                        <input type="text" id="lemailaddress" name="emailaddress" placeholder="Email Address">
+                    </div>
+                    <textarea id="subject-field" name="subject" placeholder="Inquiry" style="height:300px"></textarea>
+                    <input type="submit" value="Submit">
+                </form>
+        </div>
+          <script src="../javascript/Functions.js"></script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"
+          async defer></script>
+    </body>
+
+
+</html>

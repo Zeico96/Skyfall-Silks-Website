@@ -1,0 +1,543 @@
+/* Navigation Bar
+
+    The CSS below is responsible for formatting and stylising the navigation bar at the top of the webpage. That
+    includes things like positioning the navigation bar on the left side of the screen on larger screen devices, 
+    moving the navgation bar to the top of the screen with a dropdown menu when viewed on mobile devices and 
+    positioning the logo in the correct location  
+
+    Author: Damian Kempter / W3 Schools
+*/
+
+/* -------------------------------------------------------->
+
+    The following css contained in this section was sourced from W3 Schools, but has been modified to meet the
+    intended design of the website.
+    
+    Author: W3 Schools / Damian Kempter
+    Source: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_vertical_fixed 
+*/
+.desktop-nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .desktop-nav-bar li a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    display: block;
+    color: #000;
+    padding: 5px 16px;
+    text-decoration: none;
+  }
+
+
+  .desktop-nav-bar li a.active {
+    color: #5d408f;
+    text-decoration: underline;
+  }
+
+  /* -------------------------------------------------------->         */
+  
+.desktop-nav-bar{
+  z-index: +10;
+  position: relative;
+  float: left;
+}
+
+.desktop-nav-bar a{
+  padding-top: 10.7px !important;
+}
+
+  .desktop-nav-bar ul{
+    box-shadow: 3px 6px 10px 5px rgba(0,0, 0,0.2);
+  }
+
+   .desktop-nav-bar li a:hover {
+    background-color: #5d408f;
+    color: white;
+  }
+  
+  @media  (max-width: 1000px){
+    .desktop-nav-bar{
+        display: none;
+    }
+    .content{
+      padding-left: 5% !important;
+      padding-top: 60px !important;
+    }
+
+    .slideshow-container{
+      padding-left: 0% !important; 
+    }
+
+   
+  @media (max-width: 800px){
+    .regular-image{
+      width: 100%;
+    } 
+
+    .content{
+      padding-left: 5% !important; 
+    }
+
+    .sub-heading{
+      text-align: center;
+    }
+
+    .heading{
+      text-align: center;
+    }
+
+  }
+
+  .mobile-nav-bar ul
+  {
+      line-height: 230px;
+      overflow: hidden;
+      list-style-type: none;
+      margin: 0;
+      text-align: center;  
+  }
+
+  .mobile-nav-bar {
+    padding-left: 12px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 99;
+    box-shadow: 3px 4px 10px 2px rgba(0,0, 0,0.2);
+  }
+
+
+ .mobile-nav-bar a{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    padding: 14px 16px;
+    display: block;
+  }
+
+.mobile-nav-bar #mobile-nav-items{
+  display: none;
+}
+
+.mobile-nav-bar .active{
+    color: #5d408f !important;
+    text-decoration: underline;
+  }
+
+  #hamburger-icon{
+    position: absolute;
+    float: left;
+    padding-top: 6px;;
+  }
+
+
+  #center-logo{
+  text-align: center;
+}
+
+  #mobile-logo{
+    display: inline;
+  }
+  
+
+  #nav-icon{
+    position: absolute;  
+    left: 0; 
+    right: 0; 
+    margin-left: auto; 
+    margin-right: auto; 
+    width: 45px;
+    bottom: 0;
+    padding-bottom: 20px;   
+  }
+
+
+  @media (max-width: 1400px){
+    .slideshow-container{
+      /*padding-left: 300px !important;*/
+    }
+  }
+
+
+    .slideshow-container{
+      /*padding-left: 0% !important;*/
+    }
+
+    .content{
+      /*padding-left: 5% !important;*/
+    }
+  }
+
+@media (min-width: 1000px){
+    .mobile-nav-bar{
+        display:none;
+    }
+    
+}
+
+
+/* Buttons
+
+    The CSS below is responsible for formatting and stylising the buttons which are created from links.
+    For example the css gives the buttons their purple color,makes it so they turn black when a mouse
+    hovers of them and gives the buttons their rounded design.
+
+    Author: Damian Kempter 
+*/
+
+.social-link-button{
+  height: 35px;
+  width: 20px;
+  background-color:#5d408f;
+  color: white;  
+
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-left: 4px;
+  padding-right:25px;
+  border-radius: 20px;
+
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  bottom: 20px;
+}
+
+.social-link-button:hover{
+  background-color: black !important;
+}
+
+.social-link-button p{
+  padding-left: 10px;
+}
+
+.social-link-button:hover{
+  background-color: black;
+}
+
+.social-link-button p {
+display: inline;
+}
+
+.social-link-button img{
+vertical-align: middle;
+}
+
+.link-container{
+padding-bottom: 20px;
+}
+
+
+.link-button{
+  background-color:#5d408f;
+  color: white !important;  
+
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-left: 25px;
+  padding-right:25px;
+  border-radius: 20px;
+}
+
+.link-button p{
+  padding-left: 10px;
+}
+
+.link-button:hover{
+  background-color: black;
+}
+
+.link-button p {
+display: inline;
+}
+
+.link-button img{
+vertical-align: middle;
+}
+
+.center{
+  position: relative;
+  left: 50%;
+  margin-right: -50%;
+} 
+
+button{
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+#facebook-icon{
+  background-image: url("../Images/General/facebook-icon.png");
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100px;
+}
+
+
+#nav-icon{
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 45px;
+  bottom: 0;
+  padding-bottom: 20px; 
+}
+
+.social-button{
+background-color: #5d408f;
+ width: 50px;
+ height: 50px;
+}
+
+/* General
+
+  The CSS below is responsible for general formatting of the webpage, which includes things centering the
+  webpage, setting the pages background color, setting the maximum width and setting padding so that 
+  content does not get covered by the nav bar when the side nav bar is present.
+
+
+  Author: Damian Kempter 
+*/
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
+  margin-right: auto;
+  margin-left: auto;  
+  max-width: 1615px;
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  margin-top:  0;
+  height: 100%;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+
+}
+
+html{
+    margin-top:  0;
+    scroll-behavior: smooth;
+    background-color: #e9e9e9;
+    height: 100%;
+}
+
+.content{
+  background-color: white;
+  padding-top: 30px;
+  padding-left: calc(280px + 5%); 
+  padding-right: 5%;
+}
+
+li img {
+    display: block;
+    margin: 0 auto;
+  }
+
+#logo{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+a{
+  color: black;
+  text-decoration: none;
+}
+
+
+
+/* Content containers
+
+  The CSS below is responsible for container sections which contain images and text.
+
+  Author: Damian Kempter 
+*/
+
+/* -------------------------------------------------------->
+
+  Most of the following css was created by following a YouTube tutorial from 'Online tutorials', however that css
+  has been modified to fit the intended design of the website. Some additional css was also created by created by producing
+  variations of the css shown to further meet design requirements.
+
+  
+  Author: Damian Kempter / Online Tutorials 
+  Source: https://www.youtube.com/watch?v=e2RQM4pE8uI&feature=youtu.be
+*/
+
+.container-parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+
+.column-container{
+  position: relative;
+  /*width: 1000px;*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+
+.container{
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+
+.container .card{
+  position: relative;
+  /* max-width: 450px;*/
+  margin: 0px;
+  padding: 0px; /*Padding around image*/
+  display: flex;
+
+
+}
+
+.container .card .imgBx{
+  max-width: 450px;
+  flex:  0 0 450px;
+}
+
+.container .card .imgBx img{
+  max-width: 100%;
+ }
+
+.container .card .container-content{
+  margin-left: 0px;
+}
+
+.mobile-arrangment{
+  display: none;
+}
+
+@media (max-width: 991px){
+  .container{
+    flex-direction: column;
+  }
+
+  
+
+}
+
+@media (max-width: 800px){
+  .container{
+    flex-direction: column;
+  }
+
+.mobile-arrangment{
+  display: block;
+}
+
+.desktop-arrangment{
+  display: none;
+}
+
+.container img{
+  width: 100%;
+}
+
+#a{
+  order: 2;
+}
+
+#b{
+  order: 1;
+}
+
+  .container .content{
+    background-color: cyan;
+    width: 100%;
+  }
+
+  .container .card .imgBx{
+    max-width: 150px;
+    flex:  0 0 150px;
+  }
+  
+
+  .container .card{
+    flex-direction: column;
+    /*max-width: 350px;*/
+  }
+
+  .container .card .imgBx{
+    max-width: 100%;
+  }
+/*
+  .container .card .container-content{
+    max-width: 350px;
+  }
+  */
+  
+}
+
+.container p{
+  margin:0px;
+  padding: 0px;
+  padding-bottom: 10px;
+}
+
+.container h2{
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+/* Text
+
+    The CSS below is responsible for formatting and stylising text such as paragrphs and headings. 
+
+    Author: Damian Kempter 
+*/
+
+  
+  .sub-heading{
+    color: #5d408f;
+  }
+  
+  .heading{
+    color: #5d408f;
+    font-weight: 700;
+  }
+
+  .tiny-heading{
+    margin-bottom: 0;
+  }
+
+  .answer p{
+    margin-top: 7px;
+  }
+
+  .answer{
+    padding-bottom: 5px;
+  }
+  
+  p{
+    text-align: justify;
+  }
+
+      

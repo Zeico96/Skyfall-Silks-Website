@@ -1,0 +1,317 @@
+/*  Image thumbnails
+
+    The CSS below is respsonsible for the arrangment of the gallery thumbnails and hover animation. For the image arrangment images are floated left so they sit next to one another and padding is put inbetween so
+    there is some whitespace. The width of each image is adjusted depending on browser width to display more or less columns, allowing for a responsive design. For example 
+    when the browser width is above 1300px, each image has a width of 24.9%, meaning each image takes up a quater of the page width (minus padding), resulting in a four 
+    column layout. However if the browser width is at or below 1300px and above 700px each image is reduced to 33.33% of the browser wdith (minus padding), resulting in 
+    a 3 column layout.
+
+    Authors: Damian Kempter /W3 Schools / CleverTechie / Lokesh Dhakar
+
+*/
+
+/* -------------------------------------------------------->
+
+    The following css contained in this section was sourced from W3 Schools.The css has been modified to improve responsivenss by alowing for a
+    three column layout in addition to exisiting one, three and four column layouts, which allows for a better user experience by ensuring the 
+    thumbnails never get too small
+    
+    Author: W3 Schools / Damian Kempter
+    Source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_grid_responsive 
+*/
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+:not(a) {
+  box-sizing: border-box;
+}
+
+.content{
+  background-color: white !important;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 1300px) {
+  .responsive {
+    width: 33.333333%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* -------------------------------------------------------->         */
+
+/* -------------------------------------------------------->
+
+    The following css contained in this section was written by following a YouTube Tutorial at url but has expanded on to offer additional functionality 
+    in the form of a drop shadow and a border.
+
+    Author: CleverTechie / Damian Kempter
+    Source: https://www.youtube.com/watch?v=TSRtBISvsh4&t=402s 
+*/
+
+.thumbnail:hover{
+  box-shadow: 2px 2px 15px 5px rgba(0,0, 0,0.3);
+    transform: scale(1.1);
+}
+
+.thumbnail {
+  transition: 0.5s;
+  border: 3px solid #ddd; 
+  border-radius: 4px; 
+  padding: 0px; 
+}  
+
+/* -------------------------------------------------------->         */
+
+
+
+
+
+/* Gallery Image Viewer - Lightbox
+
+    The CSS below is responsible for the lightbox image gallery system, which allows images to be opened in a overlay above the webpage, in a responsive
+    manner. It also prvoides the ability to to navigate left and right to access other images in the gallery.
+
+*/
+
+/* -------------------------------------------------------->
+
+    The following css contained in this section was sourced from a github page
+    created by Lokesh Dhakar.
+
+    Author: Lokesh Dhakar
+    Source: https://github.com/lokesh/lightbox2/releases 
+*/
+body.lb-disable-scrolling {
+  overflow: hidden;
+}
+
+.lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  display: none;
+}
+
+.lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10000;
+  text-align: center;
+  line-height: 0;
+  font-weight: normal;
+  outline: none;
+}
+
+.lightbox .lb-image {
+  display: block;
+  height: auto;
+  max-width: inherit;
+  max-height: none;
+  border-radius: 3px;
+
+  /* Image border */
+  border: 4px solid white;
+}
+
+.lightbox a img {
+  border: none;
+}
+
+.lb-outerContainer {
+  position: relative;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  border-radius: 4px;
+
+  /* Background color behind image.
+     This is visible during transitions. */
+  background-color: white;
+}
+
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-loader {
+  position: absolute;
+  top: 43%;
+  left: 0;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+.lb-cancel {
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin: 0 auto;
+  background: url(../Images/Gallery/Control-Icons/loading.gif) no-repeat;
+}
+
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+.lb-container > .nav {
+  left: 0;
+}
+
+.lb-nav a {
+  outline: none;
+  background-image: url('data:image/gif;base64,R0lGODlhAQABAPAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==');
+}
+
+.lb-prev, .lb-next {
+  height: 100%;
+  cursor: pointer;
+  display: block;
+}
+
+.lb-nav a.lb-prev {
+  width: 34%;
+  left: 0;
+  float: left;
+  background: url(../Images/Gallery/Control-Icons/prev.png) left 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-prev:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.lb-nav a.lb-next {
+  width: 64%;
+  right: 0;
+  float: right;
+  background: url(../Images/Gallery/Control-Icons/next.png) right 48% no-repeat;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: opacity 0.6s;
+  -moz-transition: opacity 0.6s;
+  -o-transition: opacity 0.6s;
+  transition: opacity 0.6s;
+}
+
+.lb-nav a.lb-next:hover {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.lb-data {
+  padding: 0 4px;
+  color: #ccc;
+}
+
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
+
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.lb-data .lb-caption a {
+  color: #4ae;
+}
+
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 12px;
+  color: #999999;
+}
+
+.lb-data .lb-close {
+  display: block;
+  float: right;
+  width: 30px;
+  height: 30px;
+  background: url(../Images/Gallery/Control-Icons/close.png) top right no-repeat;
+  text-align: right;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s;
+  -moz-transition: opacity 0.2s;
+  -o-transition: opacity 0.2s;
+  transition: opacity 0.2s;
+}
+
+.lb-data .lb-close:hover {
+  cursor: pointer;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* -------------------------------------------------------->         */

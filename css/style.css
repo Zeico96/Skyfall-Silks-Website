@@ -1,0 +1,658 @@
+/* Navigation Bar
+
+    The CSS below is responsible for formatting and stylising the navigation bar at the top of the webpage. That
+    includes things like positioning the navigation bar on the left side of the screen on larger screen devices, 
+    moving the navgation bar to the top of the screen with a dropdown menu when viewed on mobile devices and 
+    positioning the logo in the correct location  
+
+    Author: Damian Kempter / W3 Schools
+*/
+
+/* -------------------------------------------------------->
+
+    The following css contained in this section was sourced from W3 Schools, but has been modified to meet the
+    intended design of the website.
+    
+    Author: W3 Schools / Damian Kempter
+    Source: https://www.w3schools.com/css/tryit.asp?filename=trycss_navbar_vertical_fixed 
+*/
+
+.desktop-nav-bar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 300px;
+    background-color: white;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+  }
+
+  .desktop-nav-bar li a {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    text-align: center;
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+
+  /* -------------------------------------------------------->         */
+
+  .desktop-nav-bar{
+    z-index: +10;
+    position: relative;
+    float: left;
+  }
+  
+    .desktop-nav-bar li{
+      margin: 0;
+    }
+  
+    .desktop-nav-bar li a.active {
+      color: #5d408f;
+      text-decoration: underline;
+    }
+
+  .desktop-nav-bar ul{
+    box-shadow: 3px 6px 10px 5px rgba(0,0, 0,0.2);
+  }
+
+   .desktop-nav-bar li a:hover {
+    background-color: #5d408f;;
+    color: white;
+  }
+  
+  @media  (max-width: 1000px){
+    .desktop-nav-bar{
+        display: none;
+    }
+    .slideshow-container{
+      padding-left: 0% !important; 
+    }
+
+    .test-image img{
+      max-height: 85vh !important;
+    }
+  
+   
+  @media (max-width: 800px){
+    .regular-image{
+      width: 100%;
+    } 
+
+    .content{
+      padding-left: 7% !important; 
+    }
+
+    .sub-heading{
+      text-align: center;
+    }
+
+    .fb-page{
+      padding-left: 20% !important;
+      }
+  }
+
+  @media (max-width: 600px){
+    .fb-page{
+      padding-left: 4% !important;
+      }
+
+  }
+
+  /*Below not working*/
+  .mobile-nav-bar ul
+  {
+      line-height: 230px;
+      overflow: hidden;
+      list-style-type: none;
+      margin: 0;
+      text-align: center;  
+  }
+
+  .mobile-nav-bar {
+    padding-left: 12px;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    z-index: 99;
+    box-shadow: 3px 4px 10px 2px rgba(0,0, 0,0.2);
+  }
+
+
+ .mobile-nav-bar a{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    text-align: center;
+    padding: 14px 16px;
+    display: block;
+  }
+
+.mobile-nav-bar #mobile-nav-items{
+  display: none;
+}
+
+.mobile-nav-bar .active{
+    color: #5d408f !important;
+    text-decoration: underline;
+  }
+
+  #hamburger-icon{
+    position: absolute;
+    float: left;
+    padding-top: 7px;;
+  }
+
+
+  #center-logo{
+  text-align: center;
+}
+
+  #mobile-logo{
+    display: inline;
+  }
+
+  @media (max-width: 1400px){
+    .slideshow-container{
+      /*padding-left: 300px !important;*/
+    }
+  }
+
+
+    .slideshow-container{
+      /*padding-left: 0% !important;*/
+    }
+
+    .content{
+      /*padding-left: 5% !important;*/
+    }
+  }
+
+@media (min-width: 1000px){
+    .mobile-nav-bar{
+        display:none;
+    }
+    
+}
+
+
+
+
+
+/* Text
+
+    The CSS below is responsible for formatting and stylising text such as paragrphs and headings. 
+    For example that includes making the pargraph text justified and giving headings their appropriate
+    color.
+
+    Author: Damian Kempter 
+*/
+
+.sub-heading{
+  color: #5d408f;
+}
+
+.heading{
+  color: #5d408f;
+  text-align: center;
+}
+
+p{
+  text-align: justify;
+}
+
+
+
+
+/* General
+
+  The CSS below is responsible for general formatting of the webpage, which includes things centering the
+  webpage, setting the pages background color, setting the maximum width and setting padding so that 
+  content does not get covered by the nav bar when the side nav bar is present.
+
+
+  Author: Damian Kempter 
+*/
+
+.content{
+padding-left: 5%;
+padding-right: 5%;
+}
+
+  li img {
+    display: block;
+    margin: 0 auto;
+  }
+
+  #logo{
+      padding-top: 30px;
+      padding-bottom: 30px;
+  }
+
+
+button:hover{
+  cursor: pointer;
+}
+
+
+  body{
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    background-color: white;
+    margin-right: auto;
+    margin-left: auto;  
+    max-width: 1600px;
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+
+  html{
+    scroll-behavior: smooth;
+    background-color: #e9e9e9;
+  }
+
+  html, body {
+    margin-top:  0;
+  }
+
+  a{
+    text-decoration: none;
+  }
+  
+  a:visited{
+    color: inherit;
+  }
+
+  
+
+
+
+/*  Slideshow
+
+    The CSS below is respsonsible for formatting, stylising and animating the slideshow.  
+
+    Author: W3 Schools 
+*/
+
+/* -------------------------------------------------------->
+
+    The following css contained in this section was sourced from W3 Schools at the url https://www.w3schools.com/w3css/w3css_slideshow.asp
+    with minimal modifications made */
+
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  padding-left: calc(0.1% + 300px); 
+
+  /*width: 81.1%; */
+  position: relative;
+  margin: auto;
+}
+
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  text-shadow: 2px 2px 8px black;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.column-section h2{
+  text-align: center;
+}
+
+.header-waves {
+  float: right;
+  width: 100%;
+  left:120px;
+  margin-left: 0;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.test-image img{
+  max-height: 85vh;
+  min-height:800px;
+}
+
+
+.float-left{
+  float: left;
+  clear: left;
+}
+
+
+
+
+
+/* Content containers
+
+  The CSS below is responsible for container sections which contain images and text.
+
+  Author: Damian Kempter 
+*/
+
+/* -------------------------------------------------------->
+
+  Most of the following css was created by following a YouTube tutorial from 'Online tutorials', however that css
+  has been modified to fit the intended design of the website. Some additional css was also created by created by producing
+  variations of the css shown to further meet design requirements.
+
+  
+  Author: Damian Kempter / Online Tutorials 
+  Source: https://www.youtube.com/watch?v=e2RQM4pE8uI&feature=youtu.be
+*/
+.container-parent{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+
+
+.column-container{
+  position: relative;
+  /*width: 1000px;*/
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;    
+  padding-bottom: 50px;
+}
+
+
+
+.container{
+  padding-top: 25px;
+  padding-bottom: 50px;
+}
+
+
+
+.container .card{
+  position: relative;
+  /* max-width: 450px;*/
+  margin: 0px;
+  padding: 0px; /*Padding around image*/
+  display: flex;
+
+
+}
+
+.container .card .imgBx{
+  max-width: 450px;
+  flex:  0 0 450px;
+}
+
+.container .card .imgBx img{
+  max-width: 100%;
+ }
+
+.container .card .container-content{
+  margin-left: 0px;
+}
+
+.mobile-arrangment{
+  display: none;
+}
+
+@media (max-width: 991px){
+  .container{
+    flex-direction: column;
+  }
+
+  
+
+}
+
+@media (max-width: 800px){
+  .container{
+    flex-direction: column;
+  }
+
+.mobile-arrangment{
+  display: block;
+}
+
+.desktop-arrangment{
+  display: none;
+}
+
+.container img{
+  width: 100%;
+}
+
+#a{
+  order: 2;
+}
+
+#b{
+  order: 1;
+}
+
+  .container .content{
+    background-color: cyan;
+    width: 100%;
+  }
+
+  .container .card .imgBx{
+    max-width: 150px;
+    flex:  0 0 150px;
+  }
+  
+
+  .container .card{
+    flex-direction: column;
+    /*max-width: 350px;*/
+  }
+
+  .container .card .imgBx{
+    max-width: 100%;
+  }
+/*
+  .container .card .container-content{
+    max-width: 350px;
+  }
+  */
+}
+
+
+
+.container p{
+  margin:0px;
+  padding: 0px;
+  padding-bottom: 10px;
+}
+
+.container h2{
+  margin-top: 0px;
+  padding-top: 0px;
+}
+
+.fb-page{
+padding-left: 30%
+}
+
+.no-hover{
+  pointer-events: fill;
+}
+
+/* Buttons
+
+    The CSS below is responsible for formatting and stylising the buttons which are created from links.
+    For example the css gives the buttons their purple color,makes it so they turn black when a mouse
+    hovers of them and gives the buttons their rounded design.
+
+    Author: Damian Kempter 
+*/
+
+.social-link-button{
+  height: 35px;
+  width: 20px;
+  background-color:#5d408f;
+  color: white;  
+
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-left: 4px;
+  padding-right:25px;
+  border-radius: 20px;
+
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  bottom: 20px;
+}
+
+.social-link-button:hover{
+  background-color: black !important;
+}
+
+.social-link-button p{
+  padding-left: 10px;
+}
+
+.social-link-button:hover{
+  background-color: black;
+}
+
+.social-link-button p {
+display: inline;
+}
+
+.social-link-button img{
+vertical-align: middle;
+}
+
+.link-container{
+padding-bottom: 20px;
+}
+
+
+.link-button{
+  background-color:#5d408f;
+  color: white !important;  
+
+  padding-bottom: 8px;
+  padding-top: 8px;
+  padding-left: 25px;
+  padding-right:25px;
+  border-radius: 20px;
+}
+
+.link-button p{
+  padding-left: 10px;
+}
+
+.link-button:hover{
+  background-color: black;
+}
+
+.link-button p {
+display: inline;
+}
+
+.link-button img{
+vertical-align: middle;
+}
+
+.center{
+  position: relative;
+  left: 50%;
+  margin-right: -50%;
+} 
+
+button{
+  border: none;
+  outline: none;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+#facebook-icon{
+  background-image: url("../Images/General/facebook-icon.png");
+  background-size: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 100px;
+}
+
+
+#nav-icon{
+  position: absolute; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 45px;
+  bottom: 0;
+  padding-bottom: 20px; 
+}
+
+.social-button{
+background-color: #5d408f;
+ width: 50px;
+ height: 50px;
+}
+
+
+.fa {
+  padding: 20px;
+  font-size: 80px;
+  width: 10px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}

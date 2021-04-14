@@ -1,0 +1,143 @@
+/*  Price boxes
+
+    The CSS below is respsonsible for formatting the price boxes. For example it gives them a purple border and
+    makes sure the headings such as price and title are centered in their respective areas. It is also respsonsible
+    for making sure the wide price boxes are respsonive, by adjusting the layout of the text when the browser width
+    shrinks below a certain size.
+
+    Author: Damian Kempter
+
+*/
+
+.price-box-short{
+    border: 8px solid#5d408f;
+    width: 260px;
+    height: 150px;
+    text-align: center;
+}
+
+.price-box-short p{
+    padding-top: 7px;
+    padding-bottom: 0px;
+    color: #5d408f;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: unset;
+}
+
+.price-box-short h4{
+    padding: 0;
+    margin: 0;
+}
+.price-box-short h1{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.price-contents{
+    float: left;
+}
+
+.price-box-wide{
+
+    border: 8px solid#5d408f;
+    width: 480px;
+    height: 170px;
+    text-align: center;
+}
+
+
+.price-box-wide p{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+}
+
+.price-box-wide h4{
+    padding: 0;
+    margin: 0;
+}
+
+.price-box-wide h1{
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.head-info{
+    width: 500px;
+}
+
+.price-box-wide .container-content p{
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.price-box-wide .card{
+    padding-left: 10%;
+}
+
+
+
+
+@media (max-width: 550px){
+    .price-box-wide{
+        width: 300px !important;
+        height: 260px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .price-info p{
+        padding-top: 10px;
+    }
+
+    .price-head {
+    padding-left: 50px;
+    }
+
+    .price-info{
+        display: block !important;
+    }
+
+    .column-container .card{
+        margin-right: auto;
+        margin-left: auto;
+        
+    }
+
+}
+
+.price-head{
+    float: left;
+    padding-right: 40px;
+
+}
+
+.testa{
+    padding-top: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+.price-info{
+    display: inline;
+    clear: both;
+    
+}
+
+
+.column-container{
+    justify-content:flex-start !important;
+ 
+  }
+
+  .column-container .card {
+      padding-right: 20px;
+      padding-bottom: 20px;
+  }
+
+
+
+
